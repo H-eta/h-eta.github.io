@@ -1,0 +1,20 @@
+{
+  "title": "The House We Share",
+  "tag": "Game Development",
+  "description": "Dissertation Project within the scope of my Master degree in Design and Multimedia, a videogame based on the category Psychological Horror - The house we share.\n\nThe main inspirations for the trace and animation technique were Phillipe Grammaticopoulos - The Regulator, Le Processus, Les Ventres - and Donato Sansone - Il Gatto.\n\nAll the sounds were recorded and edited, using DaVinci Resolve, to be integrated into the videogame (sound effects, background music, cutscenes). All the melodies are also original.\n\nThe cutscenes were animated frame-by-frame. The first one is just to give context of the situation, where we used a stable trace, while the other ones were based on the same technique that Donato Sansone used for Il Gatto, creating a sense of constant movement and uneasiness.\n\nThe narrative is set in a house, with hallways and some rooms to explore. There are also in-game animations that give a sense of immersion while navigating the space, as well as when interacting with the elements of the game.\n\nThe interactions can be done with the mouse, the keyboard, or the camera - which doesn't record, only captures and identifies the hand gesture or body parts, depending on the situation.\n\nIt has 2 different endings. The player can reach the ending where they can't leave the house, while the other ending indicates that everything that the character went through was actually only in her head. These endings, while they give some indication of what is happening, are very open to discussion, as it was important to give the player the opportunity to have their own interpretation.\n\nAt the end of the post there's a video with a playthrough to demonstrate how the game is played. The camera was only for the video, when playing the only thing that the player sees is the videogame screen.\n\nThere are still some bugs I would like to fix before releasing it to the world.",
+"link": {
+    "label": "Cutscenes",
+    "url": "https://www.youtube.com/@Bibi_Blox907/videos"
+  },
+  "media": [
+    { "type": "youtube", "src": "https://youtu.be/tzcL0zrpjYg" },
+    { "type": "image", "src": "inspiration.png" },
+    { "type": "image", "src": "music_sheet.png" },
+    { "type": "image", "src": "audio.png" },
+    { "type": "image", "src": "cutscenes.png" },
+    { "type": "image", "src": "frame_by_frame_animation.png" },
+    { "type": "image", "src": "interactions.png" },
+    { "type": "image", "src": "camera_interaction.png" },
+    { "type": "image", "src": "endings.png" }
+  ]
+}
