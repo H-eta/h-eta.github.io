@@ -1,0 +1,10 @@
+{
+  "title": "Shall we Dance",
+  "tag": "Game Development",
+  "description": "A group project for Game Design, built around the theme of Dante's Inferno.\n\nThe player descends through the layers of Hell, facing dance battles against each layer's boss — uncovering clues about them to win.\n\nMy contribution focused on all the visual sprite work: character design, gameplay sprites, and frame-by-frame movement animations, created in Pixilart.",
+  "media": [
+    { "type": "youtube", "src": "https://youtu.be/cqV0BGAp7Cg" },
+    { "type": "image", "src": "controls_panel_complete.png" },
+    { "type": "image", "src": "characters.png" }
+  ]
+}
