@@ -1,0 +1,14 @@
+{
+  "title": "Interpretive Drawing",
+  "tag": "Illustration",
+  "description": "A class project exploring self-portraiture, space, and colour. Photos taken across different positions and zones of the same location were composed into a collage, then traced by hand on paper. The traces were later digitised and coloured using distinct colour palettes — one of them based on Mondrian's visual language.",
+  "media": [
+    { "type": "image", "src": "cover__.png" },
+    { "type": "image", "src": "assigment_1_test_3.png" },
+    { "type": "image", "src": "assigment_1_test_6.png" },
+    { "type": "image", "src": "assigment_1_test_4.png" },
+    { "type": "image", "src": "assigment_1_test_5.png" },
+    { "type": "image", "src": "assigment_1_test_1.png" },
+    { "type": "image", "src": "assigment_1_test_2.png" }
+  ]
+}
