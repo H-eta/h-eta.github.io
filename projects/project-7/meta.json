@@ -1,0 +1,11 @@
+{
+  "title": "Dynamics and Apparent Movement",
+  "tag": "Digital Design",
+  "description": "A class exercise in visual composition, dynamics, and apparent movement. Starting from a provided figure, the challenge was to convey a sense of movement — despite the image being static — through deliberate use of colour and geometric forms (rectangles, triangles, and others), within a strict limit on the number of elements used.",
+  "media": [
+    { "type": "image", "src": "works.png" },
+    { "type": "image", "src": "BeatrizLagos_processo.png" },
+    { "type": "image", "src": "BeatrizLagos_processo copy.png" },
+    { "type": "image", "src": "BeatrizLagos_processo copy 2.png" }
+  ]
+}
