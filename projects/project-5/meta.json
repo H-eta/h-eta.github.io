@@ -1,0 +1,16 @@
+{
+  "title": "3D Modelling",
+  "tag": "Modelation",
+  "description": "Volumetric structure developed using typical Japanese buildings as a reference for its exterior part and, for its interior part, labyrinths, changes in gravity in floor transitions and a little bit of the logic of the dungeons and history of the game “Legend of Zelda: The minish cap ”. In this case, it would be a structure designed for two players, with the objective of reaching the interior room that is located between the two initial doors, but to do so, it would be necessary to travel through the structure from the initial stairs to the ceiling on the top floor.",
+  "media": [
+    { "type": "image", "src": "separated_floors.png" },
+    { "type": "image", "src": "pov_fourth_floor_persp.png" },
+    { "type": "image", "src": "pov_top_down_side_persp.png" },
+    { "type": "image", "src": "pov_third_floor_persp.png" },
+    { "type": "image", "src": "pov_top_down_side_persp_2.png" },
+    { "type": "image", "src": "pov_second_floor_persp.png" },
+    { "type": "image", "src": "path.png" },
+    { "type": "image", "src": "pov_top_down_persp_.png" },
+    { "type": "image", "src": "full_structure.png", "scale": 1.8 }
+  ]
+}
