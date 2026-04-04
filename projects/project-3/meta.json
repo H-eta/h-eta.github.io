@@ -1,0 +1,10 @@
+{
+  "title": "Snow White (Junji Ito) - Animation",
+  "tag": "Digital Animation",
+  "description": "A short 2D animation (~1 min) adapting Junji Ito's Snow White manga, animated frame-by-frame and staying true to his visual style — black and white, with transitions and references drawn from his broader body of work. Colour is used sparingly: warm and cold tones appear only where the narrative calls for it, such as fire scenes, letting the contrast carry weight against the otherwise monochromatic aesthetic. The voice acting was performed in Japanese by native speakers.",
+  "media": [
+    { "type": "image", "src": "moodboard.png" },
+    { "type": "image", "src": "snow white story board-1-02.png" },
+    { "type": "youtube", "src": "https://youtu.be/qKGIgF8LS34" }
+  ]
+}
