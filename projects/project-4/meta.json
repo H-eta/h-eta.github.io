@@ -1,0 +1,16 @@
+{
+  "title": "Therapeutic Motion Games",
+  "tag": "Game Development",
+  "description": "Master's dissertation project: developing four interactive videogames designed for people with autism to enhance motor skills, memory, and time response capabilities.\n\nAll games were built with Python, each with a different gameplay mechanic.\n\nThe Blender 3D robot was created to exemplify and demonstrate the movements that players needed to perform during gameplay. The robot's motions were captured using a motion tracking suit.",
+  "media": [
+    { "type": "image", "src": "suit_back_view.jpg" },
+    { "type": "image", "src": "half_body_avatar_rigging.png" },
+    { "type": "image", "src": "animation_inserted_into_blender.png" },
+    { "type": "image", "src": "game_1_explanation.png" },
+    { "type": "image", "src": "game_1_play_3.png" },
+    { "type": "image", "src": "game_2_play_yellow.png" },
+    { "type": "image", "src": "game_3_play_shield.png" },
+    { "type": "image", "src": "game_4_play_1.png" },
+    { "type": "image", "src": "leaderboard_at_the_end_example.png" }
+  ]
+}
