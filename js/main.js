@@ -11,6 +11,7 @@ const PROJECTS = [
   'project-7',
   'project-8',
   'project-9',
+  'project-10',
   // Add more here: 'project-5', ...
 ];
 
