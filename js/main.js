@@ -11,7 +11,6 @@ const PROJECTS = [
   'project-7',
   'project-8',
   'project-9',
-  'project-10',
   // Add more here: 'project-5', ...
 ];
 
@@ -24,8 +23,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadProjects();
   renderGrid();
   setupLightbox();
-  updateProjectCount();
   setupFilters();
+  setupReveal();
 });
 
 /* ── Load all meta.json files ── */
@@ -50,7 +49,7 @@ function renderGrid() {
 
   projectData.forEach((project, i) => {
     const card = document.createElement('div');
-    card.className = 'work-card';
+    card.className = 'work-card reveal';
     card.setAttribute('data-index', i);
 
     const coverSrc = `projects/${project.folder}/cover.png`;
@@ -62,17 +61,38 @@ function renderGrid() {
         <span class="work-thumb-ph" style="display:none;">No image</span>
       </div>
       <div class="work-body">
-        <div class="work-body-top">
-          <span class="work-title">${project.title}</span>
+        <div class="work-body-meta">
+          ${project.tag ? `<span class="work-tag">${project.tag}</span>` : ''}
           <span class="work-year">${project.year || ''}</span>
         </div>
-        ${project.tag ? `<span class="work-tag">${project.tag}</span>` : ''}
+        <span class="work-title">${project.title}</span>
       </div>
     `;
 
     card.addEventListener('click', () => openLightbox(i));
     grid.appendChild(card);
   });
+}
+
+/* ── Scroll-triggered reveal ── */
+function setupReveal() {
+  const els = document.querySelectorAll('.reveal');
+
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  els.forEach(el => observer.observe(el));
 }
 
 /* ── Filter by discipline ── */
@@ -97,12 +117,6 @@ function setupFilters() {
       document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
     });
   });
-}
-
-/* ── Update project count in section bar ── */
-function updateProjectCount() {
-  const el = document.getElementById('project-count');
-  if (el) el.textContent = `${projectData.length} project${projectData.length !== 1 ? 's' : ''}`;
 }
 
 /* ── Lightbox ── */
@@ -160,15 +174,15 @@ function renderLightboxContent(index) {
   if (!project) return;
 
   // Header
-  document.getElementById('lb-title').textContent = project.title;
-  document.getElementById('lb-tag').textContent   = project.tag  || '';
-  document.getElementById('lb-year').textContent  = project.year || '';
+  document.getElementById('lb-eyebrow').textContent = project.tag || 'Project';
+  document.getElementById('lb-title').textContent   = project.title;
+  document.getElementById('lb-year').textContent    = project.year || '';
 
   // Prev / Next buttons (always enabled — navigation wraps around)
   document.getElementById('lb-prev').disabled = false;
   document.getElementById('lb-next').disabled = false;
 
-  // Sidebar
+  // Intro text
   const descEl = document.getElementById('lb-desc');
   descEl.textContent = project.description || '';
   descEl.style.display = project.description ? 'block' : 'none';
@@ -190,12 +204,29 @@ function renderLightboxContent(index) {
   const images = media.filter(i => i.type === 'image');
   const nonImages = media.filter(i => i.type !== 'image');
 
-  // Image grid
-  if (images.length > 0) {
+  // Lead image (magazine-style: first image runs large, above the gallery)
+  const [lead, ...rest] = images;
+
+  if (lead) {
+    const base = `projects/${project.folder}/${lead.src}`;
+    const leadWrap = document.createElement('div');
+    leadWrap.className = 'lb-lead-image';
+    const leadImg = document.createElement('img');
+    leadImg.src = base;
+    leadImg.alt = project.title;
+    leadImg.loading = 'lazy';
+    if (lead.scale) leadImg.style.transform = `scale(${lead.scale})`;
+    leadWrap.appendChild(leadImg);
+    leadWrap.addEventListener('click', () => openZoom(base));
+    mediaEl.appendChild(leadWrap);
+  }
+
+  // Remaining images as a gallery grid
+  if (rest.length > 0) {
     const grid = document.createElement('div');
     grid.className = 'lb-image-grid';
 
-    images.forEach(item => {
+    rest.forEach(item => {
       const base = `projects/${project.folder}/${item.src}`;
       const cell = document.createElement('div');
       cell.className = 'lb-image-grid-item';
@@ -252,7 +283,7 @@ function renderLightboxContent(index) {
     mediaEl.appendChild(wrap);
   });
 
-  mediaEl.scrollTop = 0;
+  document.getElementById('lb-body').scrollTop = 0;
 }
 
 function openZoom(src) {
