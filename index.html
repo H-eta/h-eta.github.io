@@ -6,7 +6,7 @@
   <title>Beatriz Lagos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -30,15 +30,14 @@
           <div class="hero-line"></div>
           <span class="micro">Portfolio</span>
         </div>
-        <h1 class="hero-h1">Beatriz Lagos</h1>
-        <p class="hero-subtitle">
-          Design, code <em>&amp;</em> everything <em>in between.</em>
-        </p>
-        <p class="hero-desc">
-          Engineer turned designer. I build games, draw by hand, create motion pieces,
-          and write code — sometimes all in the same project.
-        </p>
-        <a class="hero-cta" href="#work">View Work →</a>
+        <h1 class="hero-h1">Beatriz <em>Lagos</em></h1>
+        <div class="hero-foot">
+          <p class="hero-desc">
+            Engineer turned designer. I build games, draw by hand, animate frame by frame,
+            and write the code that ties it all together.
+          </p>
+          <a class="hero-cta" href="#work">View Work</a>
+        </div>
       </div>
     </section>
 
@@ -47,15 +46,17 @@
       <div class="about-wrap">
         <div class="about-left">
           <span class="micro">About</span>
-          <img class="about-photo" src="img/about/photo.jpeg" alt="Beatriz Lagos" />
+          <div class="about-photo-wrap reveal">
+            <img class="about-photo" src="img/about/photo.jpeg" alt="Beatriz Lagos" />
+          </div>
         </div>
         <div class="about-right">
-          <div class="about-body">
-            <p>After a Master's in Electrical and Computer Engineering, I followed my curiosity into Design and Multimedia — because I wanted to build things that were not just functional, but felt right.</p>
-            <p>I've made games entirely from scratch: design, hand-drawn art, code, sound recording and editing. I've built web tools, created motion pieces, animated frame by frame, and modelled in 3D. I also spent 4 years learning not only the Japanese language but also its culture — and worked as a manga translator (English and Spanish to Portuguese).</p>
-            <p>Today I work as a Data Engineer — but design and making things never stopped.</p>
+          <div class="about-body reveal">
+            <p>I have a Master's in Electrical and Computer Engineering, but followed my curiosity into Design and Multimedia.</p>
+            <p>I've made games from scratch: design, hand-drawn art, code, sound recording and editing. I've also built web tools, created motion pieces, animated frame by frame, and modelled in 3D. I spent 4 years learning Japanese language and culture, and worked as a manga translator (English and Spanish to Portuguese).</p>
+            <p>Today I work as a Data Engineer, but I never stopped designing and making things.</p>
           </div>
-          <div class="about-facts">
+          <div class="about-facts reveal">
             <div class="fact"><span class="fact-k">Languages</span><span>PT (native) · EN (C1) · JP (A2)</span></div>
             <div class="fact"><span class="fact-k">Education</span><span>MSc Design &amp; Multimedia · MSc Electrical &amp; Computer Engineering</span></div>
             <div class="fact"><span class="fact-k">Availability</span><span>Freelance &amp; collaborations</span></div>
@@ -67,18 +68,16 @@
     <!-- ── Work ── -->
     <section id="work">
       <div class="section-bar">
-        <span class="micro">Work</span>
-        <span class="micro" id="project-count"></span>
+        <span class="micro">Selected Work</span>
       </div>
-      <div class="hero-disciplines">
-        <button class="discipline active" data-filter="all"><span class="disc-n">00</span><span>All</span></button>
-        <button class="discipline" data-filter="game development"><span class="disc-n">01</span><span>Game Development</span></button>
-        <button class="discipline" data-filter="digital design"><span class="disc-n">02</span><span>Graphic Design</span></button>
-        <button class="discipline" data-filter="illustration"><span class="disc-n">03</span><span>Illustration</span></button>
-        <button class="discipline" data-filter="animation"><span class="disc-n">04</span><span>Motion &amp; Animation</span></button>
-        <button class="discipline" data-filter="modelation"><span class="disc-n">05</span><span>3D / Modelation</span></button>
-        <button class="discipline" data-filter="visual narrative"><span class="disc-n">06</span><span>Visual Narrative</span></button>
-        <button class="discipline" data-filter="cosplay"><span class="disc-n">07</span><span>Cosplay</span></button>
+      <div class="work-filters">
+        <button class="discipline active" data-filter="all"><span>All</span></button>
+        <button class="discipline" data-filter="game development"><span>Game Development</span></button>
+        <button class="discipline" data-filter="digital design"><span>Graphic Design</span></button>
+        <button class="discipline" data-filter="illustration"><span>Illustration</span></button>
+        <button class="discipline" data-filter="animation"><span>Motion &amp; Animation</span></button>
+        <button class="discipline" data-filter="modelation"><span>3D / Modelation</span></button>
+        <button class="discipline" data-filter="visual narrative"><span>Visual Narrative</span></button>
       </div>
       <div class="work-grid" id="work-grid">
         <!-- Populated by JS -->
@@ -92,7 +91,7 @@
       </div>
       <div class="skills-section">
 
-        <div class="skills-group">
+        <div class="skills-group reveal">
           <span class="skills-group-label">Image &amp; Illustration</span>
           <div class="skills-list">
             <span class="skill-item">Adobe Illustrator</span>
@@ -102,7 +101,7 @@
           </div>
         </div>
 
-        <div class="skills-group">
+        <div class="skills-group reveal">
           <span class="skills-group-label">Video &amp; Motion</span>
           <div class="skills-list">
             <span class="skill-item">DaVinci Resolve</span>
@@ -112,7 +111,7 @@
           </div>
         </div>
 
-        <div class="skills-group">
+        <div class="skills-group reveal">
           <span class="skills-group-label">3D &amp; Modelling</span>
           <div class="skills-list">
             <span class="skill-item">Blender</span>
@@ -121,7 +120,7 @@
           </div>
         </div>
 
-        <div class="skills-group">
+        <div class="skills-group reveal">
           <span class="skills-group-label">Programming</span>
           <div class="skills-list">
             <span class="skill-item">Python</span>
@@ -136,7 +135,7 @@
           </div>
         </div>
 
-        <div class="skills-group">
+        <div class="skills-group reveal">
           <span class="skills-group-label">Design &amp; Prototyping</span>
           <div class="skills-list">
             <span class="skill-item">Figma</span>
@@ -150,22 +149,20 @@
 
     <!-- ── Contact ── -->
     <section id="contact">
+      <div class="section-bar">
+        <span class="micro">Contact</span>
+      </div>
       <div class="contact-wrap">
-        <div>
-          <h2>Let's make<br/><em>something</em><br/>together.</h2>
-          <a class="contact-mailto" href="mailto:beatrizlagos0411@gmail.com">beatrizlagos0411@gmail.com →</a>
+        <a class="contact-mailto reveal" href="mailto:beatrizlagos0411@gmail.com">beatrizlagos0411@gmail.com →</a>
+        <div class="c-links reveal">
+          <a class="c-link" href="https://www.instagram.com/portfolio.bylagos/" target="_blank">Instagram <span class="c-arrow">↗</span></a>
+          <a class="c-link" href="https://www.linkedin.com/in/beatriz-lagos-b827a8234" target="_blank">LinkedIn <span class="c-arrow">↗</span></a>
+          <a class="c-link" href="https://h-eta.itch.io/" target="_blank">itch.io <span class="c-arrow">↗</span></a>
         </div>
-        <div>
-          <div class="c-links">
-            <a class="c-link" href="https://www.instagram.com/portfolio.bylagos/" target="_blank">Instagram <span class="c-arrow">↗</span></a>
-            <a class="c-link" href="https://www.linkedin.com/in/beatriz-lagos-b827a8234" target="_blank">LinkedIn <span class="c-arrow">↗</span></a>
-            <a class="c-link" href="https://h-eta.itch.io/" target="_blank">itch.io <span class="c-arrow">↗</span></a>
-          </div>
-          <p class="contact-note">
-            Based in Coimbra, Portugal (UTC+1).<br/>
-            Open to freelance and creative collaborations.
-          </p>
-        </div>
+        <p class="contact-note reveal">
+          Based in Coimbra, Portugal (UTC+1).<br/>
+          Open to freelance and creative collaborations.
+        </p>
       </div>
     </section>
 
@@ -182,26 +179,22 @@
 
   <div class="lightbox" id="lightbox">
     <div class="lb-header">
-      <div class="lb-header-left">
-        <span class="lb-title" id="lb-title"></span>
-        <div class="lb-meta">
-          <span class="lb-tag"  id="lb-tag"></span>
-          <span class="lb-year" id="lb-year"></span>
-        </div>
-      </div>
+      <span class="lb-eyebrow" id="lb-eyebrow"></span>
       <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
     </div>
-    <div class="lb-body">
-      <div class="lb-media" id="lb-media"></div>
-      <div class="lb-sidebar">
+    <div class="lb-body" id="lb-body">
+      <div class="lb-intro">
+        <div class="lb-intro-top">
+          <span class="lb-title" id="lb-title"></span>
+          <span class="lb-year" id="lb-year"></span>
+        </div>
         <p class="lb-desc" id="lb-desc"></p>
         <a class="lb-link" id="lb-link" href="#" target="_blank" rel="noopener"></a>
-        <div class="lb-nav">
-          <button class="lb-nav-btn" id="lb-prev">← Prev</button>
-          <button class="lb-nav-btn" id="lb-next">Next →</button>
-        </div>
       </div>
+      <div class="lb-media" id="lb-media"></div>
     </div>
+    <button class="lb-side-nav lb-side-prev" id="lb-prev" aria-label="Previous project">←</button>
+    <button class="lb-side-nav lb-side-next" id="lb-next" aria-label="Next project">→</button>
   </div>
 
   <script src="js/main.js"></script>
